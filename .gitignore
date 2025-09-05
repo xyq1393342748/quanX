@@ -1,0 +1,11 @@
+# 抓包分析文件
+抓包分析.http
+
+# 其他常见的忽略文件
+.DS_Store
+*.log
+*.tmp
+node_modules/
+*.swp
+*.swo
+*~
