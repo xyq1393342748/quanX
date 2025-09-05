@@ -27,6 +27,14 @@ if (url.includes("api.timestore.vip") && url.includes("/timeline/show")) {
         jsonData.data.type = 0;
         console.log("已修改 data.type: 1 -> 0");
       }
+      if (jsonData.data.shareType === 0) {
+        jsonData.data.type = 1;
+        console.log("已修改 data.type: 1 -> 0");
+      }
+      // 将payUserIds加入3928105
+      if (jsonData.data.payUserIds) {
+        jsonData.data.payUserIds.push(3928105);
+      }
     }
 
     // 重新序列化JSON

@@ -146,3 +146,18 @@ let body = $response.body;try{let obj = JSON.parse(body);if(obj && obj.data && o
 [mitm]
 hostname = api.timestore.vip
 ```
+
+## BoxJS 版本（带提示功能）
+
+如果您想要更丰富的提示功能和更好的调试体验，可以使用 BoxJS 版本：
+
+- 脚本文件：`timestore_boxjs.js`
+- 配置指南：`BoxJS配置指南.md`
+- 特点：在内容中显示修改状态，更详细的日志输出
+
+### BoxJS 版本特点
+
+- ✅ 在内容末尾显示修改状态
+- ✅ 详细的控制台日志
+- ✅ 增强的错误处理
+- ✅ 更好的调试体验
