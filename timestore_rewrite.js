@@ -34,6 +34,36 @@ if (url.includes("api.timestore.vip") && url.includes("/timeline/show")) {
       }
     }
 
+    // 处理posts中的shareInfo
+    if (
+      jsonData &&
+      jsonData.data &&
+      jsonData.data.posts &&
+      Array.isArray(jsonData.data.posts)
+    ) {
+      jsonData.data.posts.forEach((post, index) => {
+        if (
+          post &&
+          post.shareInfo &&
+          post.shareInfo.postContent &&
+          post.postContent
+        ) {
+          try {
+            // URL编码shareInfo的postContent
+            const encodedShareContent = encodeURIComponent(
+              post.shareInfo.postContent
+            );
+            // 使用分割符号拼接到原postContent
+            post.postContent =
+              post.postContent + "\n----------\n" + encodedShareContent;
+            console.log(`已处理第${index + 1}个post的shareInfo`);
+          } catch (error) {
+            console.log(`处理第${index + 1}个post的shareInfo时出错:`, error);
+          }
+        }
+      });
+    }
+
     // 重新序列化JSON
     const modifiedBody = JSON.stringify(jsonData);
 
