@@ -34,34 +34,31 @@ if (url.includes("api.timestore.vip") && url.includes("/timeline/show")) {
       }
     }
 
-    // 处理posts中的shareInfo
+    // 处理data中的shareInfo
     if (
       jsonData &&
       jsonData.data &&
-      jsonData.data.posts &&
-      Array.isArray(jsonData.data.posts)
+      jsonData.data.shareInfo &&
+      jsonData.data.postContent
     ) {
-      jsonData.data.posts.forEach((post, index) => {
-        if (
-          post &&
-          post.shareInfo &&
-          post.shareInfo.postContent &&
-          post.postContent
-        ) {
-          try {
-            // URL编码shareInfo的postContent
-            const encodedShareContent = encodeURIComponent(
-              post.shareInfo.postContent
-            );
-            // 使用分割符号拼接到原postContent
-            post.postContent =
-              post.postContent + "\n----------\n" + encodedShareContent;
-            console.log(`已处理第${index + 1}个post的shareInfo`);
-          } catch (error) {
-            console.log(`处理第${index + 1}个post的shareInfo时出错:`, error);
-          }
+      try {
+        // shareInfo是字符串，需要先解析
+        const shareInfoObj = JSON.parse(jsonData.data.shareInfo);
+        if (shareInfoObj && shareInfoObj.postContent) {
+          // URL编码shareInfo的postContent
+          const encodedShareContent = encodeURIComponent(
+            shareInfoObj.postContent
+          );
+          // 使用分割符号拼接到原postContent
+          jsonData.data.postContent =
+            jsonData.data.postContent +
+            "%0A----------%0A" +
+            encodedShareContent;
+          console.log("已处理shareInfo，拼接到postContent");
         }
-      });
+      } catch (error) {
+        console.log("处理shareInfo时出错:", error);
+      }
     }
 
     // 重新序列化JSON
