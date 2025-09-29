@@ -7,11 +7,10 @@ const response = $response;
 
 // 检查是否是目标API
 if (
-  url.includes("api.timestore.vip") &&
-  (url.includes("/timeline/show") ||
-    url.includes("/timeline/squares") ||
-    url.includes("/timeline/mymblog") ||
-    url.includes("/timeline/follows"))
+  url.includes("/timeline/show") ||
+  url.includes("/timeline/squares") ||
+  url.includes("/timeline/mymblog") ||
+  url.includes("/timeline/follows")
 ) {
   try {
     // 解析响应体
