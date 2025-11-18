@@ -41,7 +41,7 @@ if (
 
     // 处理shareInfo的函数
     function processShareInfo(post, index = "") {
-      if (post && post.shareInfo && post.postContent) {
+      if (post && post.shareInfo) {
         try {
           // shareInfo可能是字符串或空字符串
           if (typeof post.shareInfo === "string" && post.shareInfo.trim()) {
