@@ -52,8 +52,10 @@ if (
                 shareInfoObj.postContent
               );
               // 使用分割符号拼接到原postContent
+              // 如果原postContent为空或undefined，直接使用shareInfo的内容
+              const originalContent = post.postContent || "";
               post.postContent =
-                post.postContent + "%0A----------%0A" + encodedShareContent;
+                originalContent + "%0A----------%0A" + encodedShareContent;
               console.log(`已处理${index}shareInfo，拼接到postContent`);
             }
           }
