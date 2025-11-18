@@ -76,7 +76,7 @@ if (
       });
     }
     // 检查是否为单个post格式 (data对象)
-    else if (jsonData && jsonData.data && jsonData.data.postContent) {
+    else if (jsonData && jsonData.data) {
       // 处理单个post
       processShareInfo(jsonData.data, "");
     }
