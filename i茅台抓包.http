@@ -1,0 +1,37 @@
+POST /xhr/front/mall/item/purchaseInfoV2 HTTP/1.1
+Host: h5.moutai519.com.cn
+Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+Sec-Fetch-Site: same-origin
+Accept-Language: zh-CN,zh-Hans;q=0.9
+Accept-Encoding: gzip, deflate, br
+Sec-Fetch-Mode: cors
+Content-Type: application/json
+Origin: https://h5.moutai519.com.cn
+MT-APP-Version: 1.8.9
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 moutaiapp/1.8.9 device-id/1b0a0b238b110fee7d671c4bc24b9233 BS-DVID/mj5a3rZsXLmU1VYk2-Y1OpkUzXu-8uTMazoxlFMd3M6td26qrvWt2PPF3mfFm1LYsHqK5Chnfi8Iz5orI7U_f8g
+Referer: https://h5.moutai519.com.cn/mt/item/smsp-detail?appConfig=2_1_2
+Content-Length: 795
+x-csrf-token: 
+Sec-Fetch-Dest: empty
+Cookie: MT-Device-ID-Wap=A5FAB75C-014B-4801-A567-DD3DA12655C5; MT-Token-Wap=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJtdCIsImV4cCI6MTc2OTc5MzM2MywidXNlcklkIjoxMDg4NzQyOTA0LCJkZXZpY2VJZCI6IkE1RkFCNzVDLTAxNEItNDgwMS1BNTY3LUREM0RBMTI2NTVDNSIsImlhdCI6MTc2NzIwMTM2M30.RxjUa9_vtI6PiUU1gNar5tvXVG3cJLbFT-rTWUrmWqU; __bid_n=18a8392e557910407e4207
+
+{"hot":true,"spuId":"IMTP1000313","jt":"31%24eyJrIj4iNyI0Iix5IkciQEdHSUZFS0pHTklOUCJJIkFqIjwiNTw8Pjs6QD88Qz5DRSI%2BIjYzIlEiSlFRU1BPVTQxNjw3OCIzIit5IkYiQz9AQSI%2FIjkiUSJMSFBKVSJLImsiPSJuVWFqXHVSVllSUXlKNktNNTRNZTUvX2FWQGp0M1xlT1YsbmJZVVZccHFkY2treXg2TzMuSjstUyxWUFBGZEorZnRWPEFgLlgqLlhVSER4K2dNKi9LaTQ8aUBFc0kqdFM%2BWTotXHVdbzJyXWlYVDguSlc6YjY5LDI5VkdILDl2SldzXm5OQ1h2XG9gLFhJVip4Ki1pT2tjUGtfQmhFSXRKLWhSQExQPVB6LzFYZFkpR295LVE7LmRzPmc7N2VmXTZcUG1gXC9bRVJjLnhfOVw%2FMGAtNW87TnJDdFZBSk5bKjBnW3RLek8%2FOGRdXSwsR0xvYVxqUjZnclBocnBTNU5IKTdYbl1Oc1dFPVN3d2x0VTZnLWBNXzg4dHUwZDVYWG05bVVQV3FaQ1pePlk0aWZKM1tCX3AsMD13MWBBcWlFV18%2FP3dBUDosMTJUUXhhLipcemNaWj9DXTQzZGZHSU94dV5Wd0w%2Bc11fMjRNfGxrSXZGb0NqPWpjSDhPekpRRW5eRz84V149b2NHdFp5aD54Kng3UDxOZGFafFAwfGc3Z2ppPG05Qm9EP3N1dXZKeUVOR3l5LCouUlRVMTNnIn0%3D"}
+
+
+HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: mt-app-version,x-csrf-token,x-requested-with,content-type,MT-BIZID
+Access-Control-Allow-Origin: https://h5.moutai519.com.cn
+Access-Control-Allow-Methods: POST,GET,OPTIONS
+Access-Control-Max-Age: 600
+Allow: GET,HEAD,POST,PUT,DELETE,OPTIONS,PATCH
+Vary: Access-Control-Request-Headers
+Date: Fri, 02 Jan 2026 01:13:25 GMT
+Server: yanxuan-ianus/0.9.7
+Connection: keep-alive
+
+{"code":2000,"data":{"itemId":"IMTP1000313","offline":false,"purchaseInfoMap":{"1001017":{"defaultSkuFlag":true,"purchaseInfo":{"skuId":"741","inventory":0,"presellInventory":0,"canAddCart":false,"forbiddenBuyDesc":"已售罄","limitCount":12,"inDeliveryArea":true,"showSelfPickUpBtn":false,"disable":false,"defaultSkuFlag":false,"itemPriorityActId":61001,"itemPriorityActV2Switch":true,"startTimeList":[1767315600000,1767315900000,1767316200000,1767316500000,1767316800000,1767317100000]}}},"showSaleUnit":true,"nationWide":true}}
